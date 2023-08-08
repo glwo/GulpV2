@@ -1,0 +1,193 @@
+.mainSearchNav {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 6px 34px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px .06px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    width: 65vw;
+    height: 48px;
+    /* align-items: center;
+    align-content: center;
+    justify-content: center; */
+    margin-top: 12px;
+    display: flex;
+
+}
+
+.mainSearchNav>button:hover {
+    cursor: pointer;
+}
+
+.mainSearchNav>input,
+select {
+    width: 100%;
+    height: 46px;
+    margin-left: 0px;
+    border: none;
+    /* margin: auto; */
+    outline: none;
+    text-indent: 10px;
+    padding-right: auto;
+    cursor: pointer;
+}
+
+
+/* #pipeSearch {
+    font-size: 26px;
+    border-bottom: none;
+    color: aqua;
+} */
+
+.mainSearchNav #pipeSearch {
+    font-size: 26px;
+    border-bottom: none;
+    color: #ebebeb;
+    border: none;
+    outline: none;
+}
+
+/* .mainSearchNav>input:active {
+    border: none;
+} */
+
+.mainSearchNav>input:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.mainSearchNav>button {
+    height: 48px;
+    width: 48px;
+    background-color: rgba(224, 7, 7, 1);
+    color: white;
+    border: none;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.categoryBar {
+    /* display: block; */
+    margin-top: 24px;
+    margin-left: 14px;
+    display: flex;
+    column-gap: 26px;
+}
+
+#categoryBar>a {
+    color: black;
+}
+
+.categoryBar>div {
+    width: 159px;
+    display: inline-block;
+}
+
+.cat-bar {
+    color: rgba(224, 7, 7, 1);
+    border: 1.5px solid;
+}
+
+.editFilter {
+    display: flex;
+    column-gap: 26px;
+    width: 260px;
+}
+
+.filterLink {
+    width: 90px;
+}
+
+.editFilter button {
+    cursor: pointer;
+    width: fit-content;
+    /* height: 40px; */
+    /* width: 300px; */
+    /* margin: auto; */
+    background-color: transparent;
+    border: none;
+    /* border-radius: 15px; */
+    color: #0073bb;
+    font-size: 16px;
+    margin: 0;
+}
+
+/*------------- Customized Filter Modal Form ---------- */
+.customizeFilterModal {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    padding: 25px;
+    height: 54vh;
+    overflow-y: scroll;
+}
+
+.customizeFilterModal::-webkit-scrollbar {
+    display: none;
+}
+
+
+.saveFilter,
+.resetFilter {
+    background-color: #d32323;
+    width: 100%;
+    color: white;
+    border: none;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.saveFilter:hover,
+.resetFilter {
+    background-color: #ef2b2b;
+    transition-duration: 1000ms;
+}
+
+.resetFilter {
+    margin-top: 10px;
+}
+
+.catSelectionDiv {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.catSelectionDiv label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catSelectionDiv div {
+    width: 100%;
+}
+
+.customizeFilterModal div {
+    padding: 10px;
+}
+
+.customizeFilterModal select {
+    border: 1px black solid;
+    border-radius: 2px;
+    height: 32px;
+    padding: 0 10px 0 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.customizeFilterModal input {
+    width: 97%;
+}
+
+.customizeFilterModal ul {
+    color: red;
+}
+
+.customizeFilterModal h1 {
+    color: #d32383;
+}
