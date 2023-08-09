@@ -103,7 +103,16 @@ const BusinessDetail = () => {
   return (
     <>
       <div className="business-image-div">
-        {currentBusiness && currentBusiness.business_images.map(image => <img className="business-image" src={image.image_url} />)}
+      {currentBusiness && currentBusiness.business_images.map(image => (
+  <img
+    className="business-image"
+    src={image.image_url}
+    onError={(e) => {
+      e.target.src = "https://he.cecollaboratory.com/public/layouts/images/community-default-logo.png"; // Replace with the actual path to your default image
+    }}
+    alt="Business Image"
+  />
+))}
       </div>
       <div className="main-div">
         <div className="title-description-main-div">
@@ -130,8 +139,8 @@ const BusinessDetail = () => {
             <div className="location-hour-main-div">
               <div>
                 <div className="businessMap">
-                  {/* {isLoading 
-                  ? <div>Loading...</div> 
+                  {/* {isLoading
+                  ? <div>Loading...</div>
                   : currentBusiness && key && <Map currentBusiness={currentBusiness} location={location}/>} */}
                   {/* {lat && lng && <Map currentBusiness={currentBusiness} lat={lat} lng={lng}/>} */}
                   <CurrentMap />
@@ -223,7 +232,7 @@ const BusinessDetail = () => {
               <div className="side-info-top-div">
                 <div className="info-container">
                   <div>
-                    ({currentBusiness.phone_num.slice(0, 3)})-{currentBusiness.phone_num.slice(3, 6)}-{currentBusiness.phone_num.slice(6)} 
+                    ({currentBusiness.phone_num.slice(0, 3)})-{currentBusiness.phone_num.slice(3, 6)}-{currentBusiness.phone_num.slice(6)}
                   </div>
                   <div>
                     <i class="fa-solid fa-phone"></i>
